@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Write to me</title>
+<link rel="icon" href="main.ico" type="image/x-icon">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fdd6e3;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ff7eb9;
+    border-radius: 10px;
+  }
+  h1 {
+    text-align: center;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #ff0080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #ff66b3;
+  }
+  #newButton {
+    display: none; /* Hide the new button by default */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Alright, be with me hehe ~</h1>
+  <p>So write to me everything you did today:</p>
+  <p>You can write anything you want <3 don't write idk </p>
+  <p> <small><small> take a pic pretty please i wanna knoww </small></small></p>
+  <textarea id="message" placeholder="Write here..."></textarea>
+  <button onclick="showNewButton()">Send Message</button>
+  <button id="newButton" onclick="redirectToNewPage()">tyy for writingg <3 </button>
+</div>
+
+<script>
+function showNewButton() {
+  const message = document.getElementById("message").value;
+  if (!message.trim()) {
+    alert("Please write something!");
+    return;
+  }
+  
+  document.getElementById("newButton").style.display = "block"; // Show the new button
+}
+
+function redirectToNewPage() {
+  window.location.href = "new.html"; // Replace "new_page.html" with the URL of your new page
+}
+</script>
+</body>
+</html>

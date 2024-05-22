@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omori</title>
+    <link rel="icon" href="main.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #gif {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: top 0.5s linear;
+        }
+        #button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img id="gif" src="wolk.gif" alt="Moving GIF">
+    <button id="button" onclick="location.href='dinosor.html'">next</button>
+    
+    <script>
+        let gif = document.getElementById('gif');
+        let button = document.getElementById('button');
+        let position = 0;
+        let hasReachedBottom = false;
+
+        function moveGif() {
+            if (!hasReachedBottom) {
+                position += 10; // Adjust this value to control the speed of the movement
+                gif.style.top = position + 'px';
+
+                // Check if the GIF has reached the bottom of the window
+                if (position > window.innerHeight) {
+                    hasReachedBottom = true;
+                    gif.style.display = 'none';
+                    button.style.display = 'block';
+                }
+            }
+        }
+
+        setInterval(moveGif, 500); // Move the GIF every half a second
+    </script>
+</body>
+</html>

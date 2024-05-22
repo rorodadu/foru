@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boom</title>
+    <link rel="icon" href="main.ico" type="image/x-icon">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a; /* Dark gray background */
+            overflow: hidden;
+            color: #ccc; /* Light gray text */
+            font-family: Arial, sans-serif;
+        }
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-container {
+            display: none;
+            text-align: center;
+        }
+        .button-container button {
+            background-color: #333; /* Dark gray button */
+            color: #ccc; /* Light gray text */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button-container button:hover {
+            background-color: #555; /* Slightly lighter gray on hover */
+        }
+        .show-button {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container" id="gif-container">
+        <img src="bomb3.gif" alt="Explosion GIF" id="explosion-gif">
+    </div>
+    <div class="button-container" id="button-container">
+        <button onclick="window.location.href='dinosor.html'">click</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const gif = document.getElementById('explosion-gif');
+            const gifDuration = 3000; // Set this to the duration of your GIF in milliseconds
+
+            setTimeout(function() {
+                document.getElementById('gif-container').style.display = 'none';
+                document.getElementById('button-container').classList.add('show-button');
+            }, gifDuration);
+        };
+    </script>
+</body>
+</html>
+

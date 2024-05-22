@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Job Baby!</title>
+    <link rel="icon" href="main.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #192a56;
+            color: #ffffff;
+        }
+        #container {
+            margin-top: 50px;
+        }
+        #message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #3dc1d3;
+        }
+        #gif {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            border: 2px solid #3dc1d3;
+            border-radius: 5px;
+        }
+        #nextButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3dc1d3;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #nextButton:hover {
+            background-color: #1e824c;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="message">Good job baby!</div>
+        <img id="gif" src="pat.gif" alt="Gif">
+        <button id="nextButton" onclick="nextPage()">Next</button>
+    </div>
+
+    <script>
+        function nextPage() {
+            // Replace 'next-page.html' with the URL of your next page
+            window.location.href = 'next.html';
+        }
+    </script>
+</body>
+</html>

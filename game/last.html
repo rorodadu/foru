@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ily</title>
+    <link rel="icon" href="main.ico" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(226, 111, 130); /* Changed background color to pink */
+            font-family: Arial, sans-serif;
+            color: #fff; /* Changed font color to white */
+        }
+        .error-404 {
+            text-align: center;
+            color: #000;
+        }
+        .error-note {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgb(199, 99, 115); /* Changed background color to pink */
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .sad-face {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .play-button, .not-play-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .play-button {
+            background-color:  pink ;
+            color: #000;
+            border: 2px solid #fff;
+        }
+        .play-button:hover {
+            transform: translateY(-2px);
+        }
+        .not-play-button {
+            background-color: pink; /* Changed background color to pink */
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .not-play-button:hover {
+            transform: translateY(-2px);
+        }
+        .note-popup {
+            position: absolute;
+            background-color: pink;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-404">
+        <p class="message">Babyy I love you sooo much hope that you liked the gift !!! <br> ilyyy my cute little baby take care of urself and ur the best ! </p>
+        <p class="message">click on the letter there is another gift <3</p>
+        <p><small>if there's an error my bad it's 3am :P</small></p>
+        <button class="play-button" onmouseover="showNotePopup()" onmouseout="hideNotePopup()" onclick="redirectToPinkPage()">last</button>
+        <button class="not-play-button" onmouseover="startSwitchPosition()" onmouseout="stopSwitchPosition()">Quit</button>
+        <div class="note-popup" id="notePopup">Another Gift Awaits!</div> <!-- Added div for note popup -->
+    </div>
+
+    <script>
+        var switchInterval;
+
+        function showNotePopup() {
+            var notePopup = document.getElementById("notePopup");
+            notePopup.style.display = "block";
+        }
+
+        function hideNotePopup() {
+            var notePopup = document.getElementById("notePopup");
+            notePopup.style.display = "none";
+        }
+
+        function redirectToPinkPage() {
+            window.location.href = "gift.html";
+        }
+
+        function startSwitchPosition() {
+            switchInterval = setInterval(repositionButton, 100); // Adjust the interval as needed
+        }
+
+        function stopSwitchPosition() {
+            clearInterval(switchInterval);
+        }
+
+        function repositionButton() {
+            var button = document.querySelector('.not-play-button');
+            var buttonWidth = button.offsetWidth;
+            var buttonHeight = button.offsetHeight;
+            var bodyWidth = document.body.offsetWidth;
+            var bodyHeight = document.body.offsetHeight;
+
+            var randomX = Math.floor(Math.random() * (bodyWidth - buttonWidth));
+            var randomY = Math.floor(Math.random() * (bodyHeight - buttonHeight));
+
+            button.style.position = 'absolute';
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>

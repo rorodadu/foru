@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darling? let's play</title>
+    <link rel="icon" href="main.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #ffccf9;
+            color: #ff66b2;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: #ffe6ff;
+            border: 2px solid #ff99cc;
+            border-radius: 15px;
+            padding: 30px;
+            display: inline-block;
+        }
+
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .cute-button {
+            background-color: #ff99cc;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cute-button:hover {
+            background-color: #ff66b2;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">Please c'mon, you don't wanna play? I putted so much effort into making it sniff sniff</div>
+        <div class="button-container">
+            <button class="cute-button" onclick="window.location.href='play.html'">Yes</button>
+            <button class="cute-button" onclick="window.location.href='noplay3.html'">no</button>
+        </div>
+    </div>
+</body>
+</html>

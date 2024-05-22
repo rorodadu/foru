@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cmooonnn~</title>
+    <link rel="icon" href="main.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Creepster', cursive;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px red;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            background-color: red;
+            color: black;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 0 10px red;
+            transition: transform 0.1s;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+        .button.vibrate:hover {
+            animation: vibrate 0.1s infinite;
+        }
+        @keyframes vibrate {
+            0% { transform: translate(0); }
+            25% { transform: translate(-2px, 2px); }
+            50% { transform: translate(2px, -2px); }
+            75% { transform: translate(-2px, -2px); }
+            100% { transform: translate(2px, 2px); }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Let's Play darling :></h1>
+    <div class="buttons">
+        <a href="play.html" class="button">PLAY !?</a>
+        <a href="noplay1.html" class="button vibrate">No Play</a>
+    </div>
+</body>
+</html>

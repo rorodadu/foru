@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmon baby</title>
+    <link rel="icon" href="main.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            color: white;
+            font-family: 'Creepster', cursive;
+        }
+
+        .button-container {
+            position: relative;
+        }
+
+        .vibrate-button {
+            background-color: red;
+            color: white;
+            border: 3px solid darkred;
+            padding: 15px 30px;
+            font-size: 30px;
+            cursor: pointer;
+            animation: vibrate 0.1s infinite;
+            font-family: 'Creepster', cursive;
+        }
+
+        @keyframes vibrate {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(1px, -1px); }
+            50% { transform: translate(-1px, 1px); }
+            75% { transform: translate(1px, 1px); }
+            100% { transform: translate(-1px, -1px); }
+        }
+
+        .vibrate-button:hover {
+            animation: none;
+        }
+
+        .scary-sound {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="vibrate-button" onclick="navigate()">Play with me</button>
+    </div>
+    <audio class="scary-sound" id="scary-sound" src="hmm.mp3" autoplay></audio>
+    <script>
+        function navigate() {
+            document.getElementById('scary-sound').play();
+            setTimeout(function() {
+                window.location.href = 'yay.html';
+            }, 2000); // Delay for 2 seconds before navigating
+        }
+    </script>
+</body>
+</html>
